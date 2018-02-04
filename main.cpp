@@ -18,7 +18,7 @@ int main() {
     mt19937 generator(time(0));
     size_t calc[100];
 
-    /*ofstream f_opl("one_plus_lambda.out");
+    /*ofstream f_opl("one_plus_lambda.txt");
     f_opl << "testing one_plus_lambda:\n\n";
 
     for (size_t lambda = 1; lambda <= 10; ++lambda) {
@@ -40,7 +40,7 @@ int main() {
         f_opl << "\n";
     }*/
 
-    ofstream f_oplt("one_plus_lambda_tuning.out");
+    ofstream f_oplt("one_plus_lambda_tuning.txt");
     f_oplt << "testing one_plus_lambda_tuning:\n\n";
 
     for (size_t lambda = 1; lambda <= 10; ++lambda) {
