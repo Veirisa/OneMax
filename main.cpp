@@ -8,7 +8,7 @@ string random_string(mt19937 generator, size_t n) {
         if (generator() < (generator.max() >> 1)) {
             a[i] = '0';
         } else {
-            a[i] = '0';
+            a[i] = '1';
         }
     }
     return string(a, n);
