@@ -54,11 +54,11 @@ size_t onepluslambdatuning::generate_solution(const string& init_s) {
         representative best("", 0);
         operation best_op = UNDEF;
         for (size_t i = 0; i < lambda; ++i) {
-            string s = change_s(cur.s, i > (lambda >> 1) ? p * 2 : p / 2);
+            string s = change_s(cur.s, i < (lambda >> 1) ? p * 2 : p / 2);
             size_t f  = func(s);
             if (f >= best.f) {
                 best = representative(s, f);
-                best_op = i > (lambda >> 1) ? MUL : DIV;
+                best_op = i < (lambda >> 1) ? MUL : DIV;
             }
         }
         if (best.f >= cur.f) {
