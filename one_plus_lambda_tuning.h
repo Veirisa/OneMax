@@ -1,5 +1,5 @@
-#ifndef ONEPLUSLAMBDATUNING_H
-#define ONEPLUSLAMBDATUNING_H
+#ifndef ONE_PLUS_LAMBDA_TUNING_H
+#define ONE_PLUS_LAMBDA_TUNING_H
 
 #include <iostream>
 #include <ctime>
@@ -7,11 +7,12 @@
 #include <vector>
 #include <random>
 #include <algorithm>
+#include <cassert>
 using namespace std;
 
-struct onepluslambdatuning {
+struct one_plus_lambda_tuning {
 
-    explicit onepluslambdatuning(size_t new_lambda, size_t n);
+    explicit one_plus_lambda_tuning(size_t new_lambda, size_t n);
     size_t generate_solution(const string& init_s);
 
 private:
@@ -33,11 +34,13 @@ private:
     double p, min_p, max_p;
     mt19937 generator;
 
-    bool choice(double prob);
+    inline bool choice(double prob) {
+        return (double)generator() / generator.max() < prob;
+    }
+
     size_t func(const string& s);
     void change_p(operation op);
-    string change_s(const string& s, double prob);
+    string generate_child(const string& s, double prob);
 };
 
-
-#endif //ONEPLUSLAMBDATUNING_H
+#endif //ONE_PLUS_LAMBDA_TUNING_H

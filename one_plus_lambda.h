@@ -1,16 +1,17 @@
-#ifndef ONEPLUSLAMBDA_H
-#define ONEPLUSLAMBDA_H
+#ifndef ONE_PLUS_LAMBDA_H
+#define ONE_PLUS_LAMBDA_H
 
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
 #include <vector>
 #include <random>
+#include <cassert>
 using namespace std;
 
-struct onepluslambda {
+struct one_plus_lambda {
 
-    explicit onepluslambda(size_t new_lambda, size_t n);
+    explicit one_plus_lambda(size_t new_lambda, size_t n);
     size_t generate_solution(const string& init_s);
 
 private:
@@ -27,9 +28,13 @@ private:
     double p;
     mt19937 generator;
 
-    bool choice();
+    inline bool choice() {
+        return (double)generator() / generator.max() < p;
+    }
+
     size_t func(const string& s);
-    string change_s(const string& s);
+    string generate_child(const string& s);
 
 };
-#endif //ONEPLUSLAMBDA_H
+
+#endif //ONE_PLUS_LAMBDA_H

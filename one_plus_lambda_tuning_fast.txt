@@ -1,0 +1,112 @@
+testing one_plus_lambda_tuning_fast:
+
+lambda: 1  n: 100  calculatings: 1142  deviation: 359
+lambda: 1  n: 200  calculatings: 2892  deviation: 598
+lambda: 1  n: 300  calculatings: 4592  deviation: 750
+lambda: 1  n: 400  calculatings: 6682  deviation: 951
+lambda: 1  n: 500  calculatings: 8193  deviation: 836
+lambda: 1  n: 600  calculatings: 10521  deviation: 1020
+lambda: 1  n: 700  calculatings: 13249  deviation: 1129
+lambda: 1  n: 800  calculatings: 14829  deviation: 1154
+lambda: 1  n: 900  calculatings: 17084  deviation: 1223
+lambda: 1  n: 1000  calculatings: 19379  deviation: 1204
+
+lambda: 2  n: 100  calculatings: 1822  deviation: 676
+lambda: 2  n: 200  calculatings: 4370  deviation: 933
+lambda: 2  n: 300  calculatings: 7355  deviation: 1092
+lambda: 2  n: 400  calculatings: 10564  deviation: 1467
+lambda: 2  n: 500  calculatings: 13419  deviation: 1544
+lambda: 2  n: 600  calculatings: 16541  deviation: 1528
+lambda: 2  n: 700  calculatings: 20387  deviation: 1557
+lambda: 2  n: 800  calculatings: 24094  deviation: 1747
+lambda: 2  n: 900  calculatings: 27656  deviation: 2032
+lambda: 2  n: 1000  calculatings: 33657  deviation: 2951
+
+lambda: 3  n: 100  calculatings: 1480  deviation: 516
+lambda: 3  n: 200  calculatings: 3621  deviation: 665
+lambda: 3  n: 300  calculatings: 6146  deviation: 1051
+lambda: 3  n: 400  calculatings: 8810  deviation: 1187
+lambda: 3  n: 500  calculatings: 11246  deviation: 1258
+lambda: 3  n: 600  calculatings: 14206  deviation: 1295
+lambda: 3  n: 700  calculatings: 16267  deviation: 1306
+lambda: 3  n: 800  calculatings: 19607  deviation: 1702
+lambda: 3  n: 900  calculatings: 22552  deviation: 1494
+lambda: 3  n: 1000  calculatings: 25490  deviation: 1679
+
+lambda: 4  n: 100  calculatings: 1903  deviation: 678
+lambda: 4  n: 200  calculatings: 4550  deviation: 1010
+lambda: 4  n: 300  calculatings: 7270  deviation: 1207
+lambda: 4  n: 400  calculatings: 10338  deviation: 1246
+lambda: 4  n: 500  calculatings: 13328  deviation: 1332
+lambda: 4  n: 600  calculatings: 17273  deviation: 1774
+lambda: 4  n: 700  calculatings: 20952  deviation: 2174
+lambda: 4  n: 800  calculatings: 24569  deviation: 2093
+lambda: 4  n: 900  calculatings: 27776  deviation: 2097
+lambda: 4  n: 1000  calculatings: 31194  deviation: 2091
+
+lambda: 5  n: 100  calculatings: 1628  deviation: 463
+lambda: 5  n: 200  calculatings: 4253  deviation: 1075
+lambda: 5  n: 300  calculatings: 6534  deviation: 1017
+lambda: 5  n: 400  calculatings: 9529  deviation: 1227
+lambda: 5  n: 500  calculatings: 12515  deviation: 1253
+lambda: 5  n: 600  calculatings: 16065  deviation: 1753
+lambda: 5  n: 700  calculatings: 19465  deviation: 1586
+lambda: 5  n: 800  calculatings: 22238  deviation: 1648
+lambda: 5  n: 900  calculatings: 24492  deviation: 1851
+lambda: 5  n: 1000  calculatings: 27317  deviation: 1898
+
+lambda: 6  n: 100  calculatings: 2035  deviation: 688
+lambda: 6  n: 200  calculatings: 4680  deviation: 916
+lambda: 6  n: 300  calculatings: 8045  deviation: 1574
+lambda: 6  n: 400  calculatings: 10666  deviation: 1282
+lambda: 6  n: 500  calculatings: 14237  deviation: 1668
+lambda: 6  n: 600  calculatings: 18064  deviation: 1707
+lambda: 6  n: 700  calculatings: 21739  deviation: 2215
+lambda: 6  n: 800  calculatings: 24255  deviation: 2037
+lambda: 6  n: 900  calculatings: 29173  deviation: 2356
+lambda: 6  n: 1000  calculatings: 31983  deviation: 2015
+
+lambda: 7  n: 100  calculatings: 1820  deviation: 637
+lambda: 7  n: 200  calculatings: 4210  deviation: 858
+lambda: 7  n: 300  calculatings: 6872  deviation: 1114
+lambda: 7  n: 400  calculatings: 9451  deviation: 1100
+lambda: 7  n: 500  calculatings: 12735  deviation: 1199
+lambda: 7  n: 600  calculatings: 15847  deviation: 1233
+lambda: 7  n: 700  calculatings: 19108  deviation: 1636
+lambda: 7  n: 800  calculatings: 21914  deviation: 1558
+lambda: 7  n: 900  calculatings: 26068  deviation: 1794
+lambda: 7  n: 1000  calculatings: 29448  deviation: 1864
+
+lambda: 8  n: 100  calculatings: 2050  deviation: 643
+lambda: 8  n: 200  calculatings: 4583  deviation: 827
+lambda: 8  n: 300  calculatings: 7709  deviation: 1169
+lambda: 8  n: 400  calculatings: 10791  deviation: 1379
+lambda: 8  n: 500  calculatings: 14997  deviation: 1714
+lambda: 8  n: 600  calculatings: 16828  deviation: 1583
+lambda: 8  n: 700  calculatings: 20782  deviation: 1814
+lambda: 8  n: 800  calculatings: 23152  deviation: 1738
+lambda: 8  n: 900  calculatings: 28896  deviation: 2551
+lambda: 8  n: 1000  calculatings: 30929  deviation: 2081
+
+lambda: 9  n: 100  calculatings: 1820  deviation: 612
+lambda: 9  n: 200  calculatings: 4482  deviation: 787
+lambda: 9  n: 300  calculatings: 7657  deviation: 1416
+lambda: 9  n: 400  calculatings: 9798  deviation: 1165
+lambda: 9  n: 500  calculatings: 13642  deviation: 1649
+lambda: 9  n: 600  calculatings: 16513  deviation: 1680
+lambda: 9  n: 700  calculatings: 19066  deviation: 1481
+lambda: 9  n: 800  calculatings: 22884  deviation: 1779
+lambda: 9  n: 900  calculatings: 26666  deviation: 1812
+lambda: 9  n: 1000  calculatings: 30261  deviation: 1888
+
+lambda: 10  n: 100  calculatings: 2064  deviation: 673
+lambda: 10  n: 200  calculatings: 5067  deviation: 1060
+lambda: 10  n: 300  calculatings: 7474  deviation: 1173
+lambda: 10  n: 400  calculatings: 10551  deviation: 1153
+lambda: 10  n: 500  calculatings: 14579  deviation: 1683
+lambda: 10  n: 600  calculatings: 17558  deviation: 1839
+lambda: 10  n: 700  calculatings: 21297  deviation: 1835
+lambda: 10  n: 800  calculatings: 25541  deviation: 2613
+lambda: 10  n: 900  calculatings: 28005  deviation: 1755
+lambda: 10  n: 1000  calculatings: 32552  deviation: 2443
+
