@@ -52,10 +52,10 @@ private:
         return start_ind + size_t(log((double)generator() / generator.max()) / log(1 - prob));
     }
 
-    size_t func(const representative& parent, const vector<size_t>& dif);
     size_t init_func(const string& s);
-    void change_p(operation op);
+    size_t func(const representative& parent, const vector<size_t>& dif);
     vector<size_t> generate_dif(const string& s, double prob);
+    void change_p(operation op);
 };
 
 #endif //ONE_PLUS_LAMBDA_TUNING_FAST_H

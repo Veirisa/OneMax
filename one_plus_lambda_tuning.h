@@ -39,8 +39,8 @@ private:
     }
 
     size_t func(const string& s);
-    void change_p(operation op);
     string generate_child(const string& s, double prob);
+    void change_p(operation op);
 };
 
 #endif //ONE_PLUS_LAMBDA_TUNING_H

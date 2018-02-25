@@ -4,20 +4,14 @@ one_plus_lambda_tuning::one_plus_lambda_tuning(size_t new_lambda, size_t new_n) 
                                                                             min_p((double)2 / new_n), max_p(0.25),
                                                                             generator(unsigned(time(0))) {};
 
-void one_plus_lambda_tuning::change_p(operation op) {
-    if (choice(0.5)) {
-        if (op == MUL) {
-            p = min(p * 2, max_p);
-        } else {
-            p = max(p / 2, min_p);
-        }
-    } else {
-        if (choice(0.5)) {
-            p = min(p * 2, max_p);
-        } else {
-            p = max(p / 2, min_p);
+size_t one_plus_lambda_tuning::func(const string& s) {
+    size_t result = 0;
+    for (size_t i = 0; i < n; ++i) {
+        if (s[i] == '1') {
+            ++result;
         }
     }
+    return result;
 }
 
 string one_plus_lambda_tuning::generate_child(const string& s, double prob) {
@@ -33,14 +27,20 @@ string one_plus_lambda_tuning::generate_child(const string& s, double prob) {
     return child;
 }
 
-size_t one_plus_lambda_tuning::func(const string& s) {
-    size_t result = 0;
-    for (size_t i = 0; i < n; ++i) {
-        if (s[i] == '1') {
-            ++result;
+void one_plus_lambda_tuning::change_p(operation op) {
+    if (choice(0.5)) {
+        if (op == MUL) {
+            p = min(p * 2, max_p);
+        } else {
+            p = max(p / 2, min_p);
+        }
+    } else {
+        if (choice(0.5)) {
+            p = min(p * 2, max_p);
+        } else {
+            p = max(p / 2, min_p);
         }
     }
-    return result;
 }
 
 size_t one_plus_lambda_tuning::generate_solution(const string& init_s) {

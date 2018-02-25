@@ -34,7 +34,6 @@ private:
 
     size_t func(const string& s);
     string generate_child(const string& s);
-
 };
 
 #endif //ONE_PLUS_LAMBDA_H

@@ -42,8 +42,8 @@ private:
         return start_ind + size_t(log((double)generator() / generator.max()) / log(1 - p));
     }
 
-    size_t func(const representative& parent, const vector<size_t>& dif);
     size_t init_func(const string& s);
+    size_t func(const representative& parent, const vector<size_t>& dif);
     vector<size_t> generate_dif(const string& s);
 };
 

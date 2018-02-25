@@ -4,32 +4,6 @@ one_plus_lambda_tuning_fast::one_plus_lambda_tuning_fast(size_t new_lambda, size
                                                                                   min_p((double)2 / new_n), max_p(0.25),
                                                                                   generator(unsigned(time(0))) {};
 
-void one_plus_lambda_tuning_fast::change_p(operation op) {
-    if (choice(0.5)) {
-        if (op == MUL) {
-            p = min(p * 2, max_p);
-        } else {
-            p = max(p / 2, min_p);
-        }
-    } else {
-        if (choice(0.5)) {
-            p = min(p * 2, max_p);
-        } else {
-            p = max(p / 2, min_p);
-        }
-    }
-}
-
-vector<size_t> one_plus_lambda_tuning_fast::generate_dif(const string& s, double prob) {
-    vector<size_t> dif;
-    size_t ind = next_inv_ind(0, prob);
-    while (ind < n) {
-        dif.push_back(ind);
-        ind = next_inv_ind(ind + 1, prob);
-    }
-    return dif;
-}
-
 size_t one_plus_lambda_tuning_fast::init_func(const string& s) {
     size_t result = 0;
     for (size_t i = 0; i < n; ++i) {
@@ -50,6 +24,32 @@ size_t one_plus_lambda_tuning_fast::func(const representative& parent, const vec
         }
     }
     return result;
+}
+
+vector<size_t> one_plus_lambda_tuning_fast::generate_dif(const string& s, double prob) {
+    vector<size_t> dif;
+    size_t ind = next_inv_ind(0, prob);
+    while (ind < n) {
+        dif.push_back(ind);
+        ind = next_inv_ind(ind + 1, prob);
+    }
+    return dif;
+}
+
+void one_plus_lambda_tuning_fast::change_p(operation op) {
+    if (choice(0.5)) {
+        if (op == MUL) {
+            p = min(p * 2, max_p);
+        } else {
+            p = max(p / 2, min_p);
+        }
+    } else {
+        if (choice(0.5)) {
+            p = min(p * 2, max_p);
+        } else {
+            p = max(p / 2, min_p);
+        }
+    }
 }
 
 size_t one_plus_lambda_tuning_fast::generate_solution(const string& init_s) {

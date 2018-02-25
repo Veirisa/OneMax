@@ -1,0 +1,12 @@
+hard testing one_plus_lambda_tuning_fast:
+
+lambda: 200  n: 10000  calculatings: 776917  deviation: 7136
+lambda: 200  n: 20000  calculatings: 1620007  deviation: 9253
+lambda: 200  n: 30000  calculatings: 2472879  deviation: 13463
+lambda: 200  n: 40000  calculatings: 3376931  deviation: 12647
+lambda: 200  n: 50000  calculatings: 4250627  deviation: 17219
+lambda: 200  n: 60000  calculatings: 5255623  deviation: 17415
+lambda: 200  n: 70000  calculatings: 6144061  deviation: 20962
+lambda: 200  n: 80000  calculatings: 7030077  deviation: 19626
+lambda: 200  n: 90000  calculatings: 8018521  deviation: 20277
+lambda: 200  n: 100000  calculatings: 9015351  deviation: 20902
