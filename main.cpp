@@ -48,7 +48,7 @@ void full_testing(const string& algorithm_name, bool withHard) {
         fout << "\n";
     }
     if (withHard) {
-        for (size_t lambda = 50; lambda <= 800; lambda *= 2) {
+        for (size_t lambda = 50; lambda <= 1600; lambda *= 2) {
             for (size_t n = 10000; n <= 100000; n += 10000) {
                 testing<OPL>(fout, lambda, n);
             }

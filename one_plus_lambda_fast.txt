@@ -165,3 +165,14 @@ lambda: 800  n: 80000  calculatings: 15616641  deviation: 303371
 lambda: 800  n: 90000  calculatings: 17563169  deviation: 275576
 lambda: 800  n: 100000  calculatings: 19637185  deviation: 374503
 
+lambda: 1600  n: 10000  calculatings: 3362177  deviation: 33012
+lambda: 1600  n: 20000  calculatings: 6744593  deviation: 73960
+lambda: 1600  n: 30000  calculatings: 10167969  deviation: 100851
+lambda: 1600  n: 40000  calculatings: 13556897  deviation: 119973
+lambda: 1600  n: 50000  calculatings: 16995265  deviation: 176805
+lambda: 1600  n: 60000  calculatings: 20369121  deviation: 208786
+lambda: 1600  n: 70000  calculatings: 23874081  deviation: 333724
+lambda: 1600  n: 80000  calculatings: 27254449  deviation: 273320
+lambda: 1600  n: 90000  calculatings: 30697777  deviation: 315389
+lambda: 1600  n: 100000  calculatings: 34105201  deviation: 282794
+
