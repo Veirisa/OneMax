@@ -18,7 +18,7 @@ struct one_plus_lambda_tuning_fast {
 private:
 
     enum operation {
-        UNDEF, MUL, DIV
+        MUL, DIV, UNDEF
     };
 
     struct representative {

@@ -59,10 +59,10 @@ void full_testing(const string& algorithm_name, bool withHard) {
 }
 
 int main() {
-    full_testing<one_plus_lambda>("one_plus_lambda", false);
-    full_testing<one_plus_lambda_fast>("one_plus_lambda_fast", true);
-    full_testing<one_plus_lambda_tuning>("one_plus_lambda_tuning", false);
-    full_testing<one_plus_lambda_tuning_fast>("one_plus_lambda_tuning_fast", true);
+    // full_testing<one_plus_lambda>("one_plus_lambda", false);
+    // full_testing<one_plus_lambda_fast>("one_plus_lambda_fast", true);
+    // full_testing<one_plus_lambda_tuning>("one_plus_lambda_tuning", false);
+    // full_testing<one_plus_lambda_tuning_fast>("one_plus_lambda_tuning_fast", true);
     full_testing<one_plus_lambda_learning>("one_plus_lambda_learning", true);
     return 0;
 }
