@@ -3,6 +3,7 @@
 #include "one_plus_lambda_fast.h"
 #include "one_plus_lambda_tuning.h"
 #include "one_plus_lambda_tuning_fast.h"
+#include "one_plus_lambda_learning.h"
 
 string random_string(mt19937 generator, size_t n) {
     char a[n];
@@ -62,5 +63,6 @@ int main() {
     full_testing<one_plus_lambda_fast>("one_plus_lambda_fast", true);
     full_testing<one_plus_lambda_tuning>("one_plus_lambda_tuning", false);
     full_testing<one_plus_lambda_tuning_fast>("one_plus_lambda_tuning_fast", true);
+    full_testing<one_plus_lambda_learning>("one_plus_lambda_learning", true);
     return 0;
 }

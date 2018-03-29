@@ -1,5 +1,5 @@
-#ifndef ONE_PLUS_LAMBDA_TUNING_FAST_H
-#define ONE_PLUS_LAMBDA_TUNING_FAST_H
+#ifndef ONE_PLUS_LAMBDA_LEARNING_H
+#define ONE_PLUS_LAMBDA_LEARNING_H
 
 #include <iostream>
 #include <ctime>
@@ -8,17 +8,19 @@
 #include <random>
 #include <algorithm>
 #include <cassert>
+#include <array>
 using namespace std;
 
-struct one_plus_lambda_tuning_fast {
+struct one_plus_lambda_learning {
 
-    explicit one_plus_lambda_tuning_fast(size_t new_lambda, size_t new_n);
+    explicit one_plus_lambda_learning(size_t new_lambda, size_t new_n);
+    void set_constants(double new_alpha, double new_gamma);
     size_t generate_solution(const string& init_s);
 
 private:
 
     enum operation {
-        UNDEF, MUL, DIV
+        MUL, DIV, UNDEF
     };
 
     struct representative {
@@ -39,23 +41,29 @@ private:
         }
     };
 
-    const double NUMERATOR_P = 2;
+    const double NUMERATOR_P = 1;
+    const double DEFAULT_ALPHA = 0.8;
+    const double DEFAULT_GAMMA = 0.2;
+    double alpha, gamma;
     size_t lambda, n;
     double p, min_p, max_p;
     mt19937 generator;
+    vector<array<double, 2>> Q;
 
     inline bool choice(double prob) {
         return (double)generator() / generator.max() < prob;
     }
 
-    inline size_t next_inv_ind(size_t start_ind, double prob) {
-        return start_ind + size_t(log((double)generator() / generator.max()) / log(1 - prob));
+    inline size_t next_inv_ind(size_t start_ind) {
+        return start_ind + size_t(log((double)generator() / generator.max()) / log(1 - p));
     }
 
+    void init_q();
     size_t init_func(const string& s);
     size_t func(const representative& parent, const vector<size_t>& dif);
-    vector<size_t> generate_dif(const string& s, double prob);
-    void change_p(operation op);
+    vector<size_t> generate_dif(const string& s);
+    operation change_p(size_t suc, operation op, double r, size_t new_suc);
 };
 
-#endif //ONE_PLUS_LAMBDA_TUNING_FAST_H
+
+#endif //ONE_PLUS_LAMBDA_LEARNING_H

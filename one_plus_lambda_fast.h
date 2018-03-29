@@ -11,7 +11,7 @@ using namespace std;
 
 struct one_plus_lambda_fast {
 
-    explicit one_plus_lambda_fast(size_t new_lambda, size_t n);
+    explicit one_plus_lambda_fast(size_t new_lambda, size_t new_n);
     size_t generate_solution(const string& init_s);
 
 private:
