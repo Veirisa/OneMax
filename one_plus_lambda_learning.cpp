@@ -7,7 +7,8 @@ one_plus_lambda_learning::one_plus_lambda_learning(size_t new_lambda, size_t new
         max_p(0.5),
         generator(unsigned(time(0))),
         alpha(DEFAULT_ALPHA),
-        gamma(DEFAULT_GAMMA) {
+        gamma(DEFAULT_GAMMA),
+        visits() {
     init_q();
 };
 
@@ -56,6 +57,7 @@ vector<size_t> one_plus_lambda_learning::generate_dif(const string& s) {
 }
 
 one_plus_lambda_learning::operation one_plus_lambda_learning::change_p(size_t suc, operation op, double r, size_t new_suc) {
+    ++visits[new_suc];
     if (op != UNDEF) {
         Q[suc][op] = Q[suc][op] + alpha * (r + gamma * max(Q[new_suc][DIV], Q[new_suc][MUL]) - Q[suc][op]);
     }
@@ -70,6 +72,8 @@ one_plus_lambda_learning::operation one_plus_lambda_learning::change_p(size_t su
 
 size_t one_plus_lambda_learning::generate_solution(const string& init_s) {
     assert(init_s.size() == n);
+    visits.clear();
+    visits.resize(lambda + 1, 0);
     representative cur(init_s, init_func(init_s));
     size_t calculatings = 1;
     size_t suc = 0;
@@ -98,4 +102,9 @@ size_t one_plus_lambda_learning::generate_solution(const string& init_s) {
         op = new_op;
     }
     return calculatings;
+}
+
+vector<size_t> one_plus_lambda_learning::generate_visits(const string& init_s) {
+    generate_solution(init_s);
+    return visits;
 }

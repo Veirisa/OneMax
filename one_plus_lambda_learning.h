@@ -16,6 +16,7 @@ struct one_plus_lambda_learning {
     explicit one_plus_lambda_learning(size_t new_lambda, size_t new_n);
     void set_constants(double new_alpha, double new_gamma);
     size_t generate_solution(const string& init_s);
+    vector<size_t> generate_visits(const string& init_s);
 
 private:
 
@@ -49,6 +50,7 @@ private:
     double p, min_p, max_p;
     mt19937 generator;
     vector<array<double, 2>> Q;
+    vector<size_t> visits;
 
     inline bool choice(double prob) {
         return (double)generator() / generator.max() < prob;
